@@ -59,12 +59,18 @@ export const Chat = () => {
 
   return (
     <div className={`left  border-gray-300 flex flex-col h-full`}>
-      <div className={`${styles.user} border-b border-gray-300 h-[250px] flex flex-col items-center justify-center`}>
-        <Avatar name={otherUser.name} photoURL={otherUser.photoURL} size="w-[80px] h-[80px] rounded-[50%] mb-2" />
-        <span className="font-bold text-xl">{otherUser.name}</span>
+      <div
+        className={`${styles.user} border-b border-gray-300 h-[80px] md:h-[250px] flex flex-row md:flex-col items-center justify-center`}
+      >
+        <Avatar
+          name={otherUser.name}
+          photoURL={otherUser.photoURL}
+          size="w-[40px] h-[40px] md:h-[80px] md:w-[80px] rounded-[50%] mb-0 md:mb-2"
+        />
+        <span className="font-base md:font-bold text-sm md:text-xl">{otherUser.name}</span>
       </div>
 
-      <div className={`${styles.scroll} flex flex-col flex-1 gap-2 p-4 overflow-y-auto`}>
+      <div className={`${styles.scroll} flex flex-col flex-1 gap-2 p-4 overflow-y-auto `}>
         {chatId && !loadingMessages ? (
           <MessageList chatId={chatId} messages={messages} currentUserId={user?.uid || ''} />
         ) : (

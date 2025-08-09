@@ -10,4 +10,7 @@
   scrollbar-width: none;
   -ms-overflow-style: none;
   scroll-behavior: smooth;
+  @media (max-width: 768px) {
+    max-height: 150px;
+  }
 }

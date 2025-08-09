@@ -7,6 +7,10 @@
   margin: 8px 0;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   animation: fadeIn 0.3s ease-out;
+  @media (max-width: 768px) {
+    max-width: 30%;
+    padding: 6px 10px;
+  }
 
   // Стиль времени сообщения
   .messageTime {
@@ -14,6 +18,9 @@
     margin-top: 4px;
     text-align: right;
     opacity: 0.7;
+    @media (max-width: 768px) {
+      font-size: 12px;
+    }
   }
 }
 

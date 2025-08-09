@@ -13,7 +13,7 @@ export const Nav = () => {
   if (error) return <div className="text-red-500 p-4">Error: {error.message}</div>;
 
   return (
-    <nav className="h-full flex flex-col">
+    <nav className="h-full flex flex-row md:flex-col">
       {navLinks
         .filter((link) => {
           // Показываем все ссылки для авторизованных пользователей
@@ -33,7 +33,7 @@ export const Nav = () => {
                 `}
               >
                 {link.svg}
-                <span className="text-2xl text-gray-400">{link.label}</span>
+                <span className="hidden 2xl:text-2xl xl:text-xl lg-text-xl md:block text-gray-400">{link.label}</span>
               </div>
             </Link>
           );
@@ -43,3 +43,4 @@ export const Nav = () => {
     </nav>
   );
 };
+// flex-direction: row;

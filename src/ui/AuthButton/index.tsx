@@ -45,7 +45,9 @@ l-78.044-66.034c-1.404-1.2-3.378-1.46-5.042-0.686c-1.681,0.775-2.75,2.456-2.75,4
           />
         </g>
       </svg>
-      <span className="text-2xl text-gray-400">{isLoading ? 'loading' : user ? 'Log out' : 'Log in'}</span>
+      <span className="hidden 2xl:text-2xl xl:text-xl lg-text-xl md:block text-gray-400">
+        {isLoading ? 'loading' : user ? 'Log out' : 'Log in'}
+      </span>
     </div>
   );
 };

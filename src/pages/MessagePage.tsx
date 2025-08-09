@@ -44,7 +44,7 @@ const MessagePage = () => {
   }));
 
   return (
-    <div className="w-full min-h-screen">
+    <div className="w-full md:min-h-screen h-[200px]">
       <ul className="divide-y divide-gray-200">
         {chats.map((chat) => {
           // Находим ID собеседника (исключаем текущего пользователя)
