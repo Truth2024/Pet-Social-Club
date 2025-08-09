@@ -15,7 +15,7 @@ const PeoplePage = () => {
   if (loadingUsers || loading) return <Spinner />;
 
   return (
-    <div className="w-full min-h-screen border-r border-r-gray-300">
+    <div className="w-full min-h-screen">
       <ul>
         {users?.map((u) => (
           <li
