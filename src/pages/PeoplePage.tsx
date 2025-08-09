@@ -18,15 +18,12 @@ const PeoplePage = () => {
     <div className="w-full min-h-screen">
       <ul>
         {users?.map((u) => (
-          <li
-            key={u.uid}
-            className="cursor-pointer"
-            role="button"
-            tabIndex={0}
+          <People
             onClick={() => handleNavigate(u.uid, u)}
-          >
-            <People name={u.name} photoURL={u.photoURL} itsYou={user?.uid == u.uid} />
-          </li>
+            name={u.name}
+            photoURL={u.photoURL}
+            itsYou={user?.uid == u.uid}
+          />
         ))}
       </ul>
     </div>
