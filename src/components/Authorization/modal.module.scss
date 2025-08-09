@@ -1,0 +1,32 @@
+.modal {
+  display: flex;
+  background-color: #fff;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 40;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-height: 400px;
+  opacity: 1;
+  width: 400px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  transform: translate(-50%, -50%);
+  border: 1px solid #d1d5dc;
+  border-radius: 24px;
+}
+
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.changeMod {
+  cursor: pointer;
+  color: #6a7282;
+  transition: all 0.3s ease;
+  &:hover {
+    color: #000;
+  }
+}

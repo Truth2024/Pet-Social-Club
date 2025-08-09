@@ -1,0 +1,68 @@
+// Основные стили сообщения
+.bubbleBase {
+  position: relative;
+  max-width: 70%;
+  padding: 12px 16px;
+  border-radius: 18px;
+  margin: 8px 0;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.3s ease-out;
+
+  // Стиль времени сообщения
+  .messageTime {
+    font-size: 0.75rem;
+    margin-top: 4px;
+    text-align: right;
+    opacity: 0.7;
+  }
+}
+
+// Стиль для сообщений текущего пользователя
+.bubbleUser {
+  align-self: flex-end;
+  background-color: #007aff;
+  color: white;
+
+  &::after {
+    content: '';
+    position: absolute;
+    right: -8px; // Увеличиваем отступ от края
+    top: 12px; // Регулируем вертикальное положение
+    width: 0;
+    height: 0;
+    border: 10px solid transparent; // Увеличиваем размер границы
+    border-left-color: #007aff; // Цвет как у сообщения
+    border-right: 0;
+  }
+}
+
+// Стиль для сообщений других пользователей
+.bubbleOther {
+  align-self: flex-start;
+  background-color: #f0f0f0;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: -8px;
+    right: auto;
+    top: 12px;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-right-color: #f0f0f0;
+    border-left: 0;
+  }
+}
+
+// Анимация появления
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,36 @@
+@import 'tailwindcss';
+#root {
+  height: 100vh;
+  display: flex;
+}
+
+.header {
+  width: 26%;
+}
+
+.main {
+  width: 36%;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  scroll-behavior: smooth;
+}
+
+.main::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.left {
+  min-width: 38%;
+}
+
+.hover {
+  transition: all 0.3s ease;
+  cursor: pointer;
+  &:hover {
+    background-color: #e5e7eb;
+  }
+  &:active {
+    background-color: #d1d5db; /* чуть темнее для нажатия */
+  }
+}

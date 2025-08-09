@@ -1,0 +1,35 @@
+.btn {
+  background-color: #9ca3af;
+  border: 0 solid black;
+  min-height: 36px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  transition: all 0.3 ease;
+}
+
+.active {
+  transition: all 0.3s ease;
+  background-color: #333;
+  /* Выразительный hover */
+  &:hover {
+    background-color: #1f1f1f;
+  }
+
+  /* Active (при нажатии) — эффект нажатия */
+  &:active {
+    background-color: #000;
+  }
+}
+
+.textArea {
+  &::placeholder {
+    color: #9ca3af;
+    font-size: 20px;
+  }
+}

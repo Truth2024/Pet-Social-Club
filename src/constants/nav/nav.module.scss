@@ -1,0 +1,14 @@
+.svg {
+  color: #99a1af;
+}
+
+.active {
+  span {
+    color: #000;
+    font-weight: 700;
+  }
+}
+
+.active .svg {
+  color: #000;
+}
