@@ -1,4 +1,3 @@
-import React from 'react';
 import { collection, query, where, orderBy } from 'firebase/firestore';
 import { useCollection } from 'react-firebase-hooks/firestore';
 import { db } from '../../firebase/firebaseConfig';
