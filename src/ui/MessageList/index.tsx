@@ -6,10 +6,10 @@ import type { DocumentData } from 'firebase/firestore';
 interface Props {
   messages: DocumentData[]; // или твой тип с from/text/createdAt
   currentUserId: string;
-  chatId: string | null;
+  chatId?: string | null;
 }
 
-export const MessageList = ({ messages, currentUserId, chatId }: Props) => {
+export const MessageList = ({ messages, currentUserId }: Props) => {
   const bottomRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {

@@ -1,7 +1,6 @@
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { Avatar } from '../../ui/Avatar';
-import { useAppSelector } from '../../hooks/redux';
-import { Spinner } from '../../ui/Spiner';
+
 import { useDocumentData } from 'react-firebase-hooks/firestore';
 import { db, doc } from '../../firebase/firebaseConfig';
 
@@ -17,8 +16,7 @@ type Chat = {
 export const Messages = ({ lastMessage, user }: Chat) => {
   const navigate = useNavigate();
 
-  const location = useLocation();
-  const [userFromServer, loading] = useDocumentData(lastMessage?.from ? doc(db, 'users', user) : null);
+  const [userFromServer] = useDocumentData(lastMessage?.from ? doc(db, 'users', user) : null);
 
   const handleChatClick = () => {
     if (!user) return;

@@ -1,9 +1,8 @@
 import { useCollection } from 'react-firebase-hooks/firestore';
 import { useAuth } from '../components/AuthContext';
-import { Spinner } from '../ui/Spiner';
 import { collection, db, orderBy, query, where } from '../firebase/firebaseConfig';
 import { Messages } from '../components/Messages';
-import { useNavigate } from 'react-router-dom';
+
 type Chat = {
   id: string;
   members: string[];
@@ -16,7 +15,6 @@ type Chat = {
   };
 };
 const MessagePage = () => {
-  const navigate = useNavigate();
   const { user } = useAuth();
 
   const [snapshot, loading, error] = useCollection(
@@ -45,12 +43,6 @@ const MessagePage = () => {
     ...(doc.data() as Omit<Chat, 'id'>),
   }));
 
-  const handleChatClick = (id: string) => {
-    if (!id) return;
-
-    navigate(`/messages?uid=${id}`);
-    console.log(id);
-  };
   return (
     <div className="w-full min-h-screen">
       <ul className="divide-y divide-gray-200">

@@ -20,7 +20,7 @@ interface UserAboutProps {
 export const UserAbout = ({ userInfo }: UserAboutProps) => {
   const navigate = useNavigate();
   const dispatch = useAppDispatch();
-  const { user, loading, error } = useAuth();
+  const { user, loading } = useAuth();
   const registeredAgo = formatRegistrationDate(userInfo.createdAt);
   const handleSend = () => {
     if (!user) {
