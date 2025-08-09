@@ -38,13 +38,15 @@ export const Tweet = ({ tweet, postId }: Props) => {
   return (
     <li className="relative border-b border-gray-200 flex w-full hover">
       <div className="p-4 flex w-full">
-        <div className="w-[40px] mr-2">
+        <div className="w-[40px] mr-0.5 md:mr-2">
           {<Avatar name={userFromServer?.name} photoURL={userFromServer?.photoURL} />}
         </div>
 
         <div className="flex-1 flex-col">
           <div className="flex items-baseline">
-            <span className="text-black font-bold mr-2">@{userFromServer?.name || '...'}</span>
+            <span className="md:text-black text-base font-medium md:font-bold mr-0.5 md:mr-2">
+              @{userFromServer?.name || '...'}
+            </span>
             <span className="text-sm text-gray-400">{new Date(tweet.createdAt).toLocaleString()}</span>
           </div>
 

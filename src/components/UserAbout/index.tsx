@@ -33,8 +33,14 @@ export const UserAbout = ({ userInfo }: UserAboutProps) => {
   return (
     <div className="flex flex-col items-center gap-2 border-t border-b border-gray-200 p-[16px] relative">
       <div className="flex flex-col items-center">
-        <Avatar name={userInfo.name} photoURL={userInfo.photoURL} size="w-[60px] h-[60px] rounded-[39px]" />
-        <span className="text-gray-500 text-[13px] absolute right-2 top-4">Зарегистрирован {registeredAgo}</span>
+        <Avatar
+          name={userInfo.name}
+          photoURL={userInfo.photoURL}
+          size="w-[40px] h-[40px] md:h-[60px] md:w-[60px] rounded-[39px]"
+        />
+        <span className="text-gray-500 text-[8px] absolute right-2 top-4 xl:text-[13px] md:text-[8px]">
+          Зарегистрирован {registeredAgo}
+        </span>
         <span>{userInfo.name}</span>
       </div>
       <div className="w-full flex justify-end">

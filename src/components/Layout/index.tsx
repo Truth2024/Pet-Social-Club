@@ -14,7 +14,7 @@ export const Layout = () => {
     <>
       <Header />
       <Authorization />
-      <main className="main overflow-auto border-r border-gray-300">
+      <main className="main overflow-auto md:border-r border-gray-300">
         <Outlet />
       </main>
       {isMessagesPage && <Chat />}
