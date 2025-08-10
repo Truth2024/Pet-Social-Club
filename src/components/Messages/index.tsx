@@ -29,7 +29,7 @@ export const Messages = ({ lastMessage, user }: ChatMessage) => {
       <div className="flex flex-col">
         <span className="font-medium text-sm">{userFromServer?.name}</span>
         <p
-          className={`text-sm font-normal text-gray-600 truncate max-w-[200px] ${
+          className={`text-sm md:text-base font-normal text-gray-600 truncate max-w-[200px] ${
             user == uidFromUrl ? ' text-white' : ''
           }`}
         >
