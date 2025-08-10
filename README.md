@@ -1,12 +1,14 @@
 # 👥 Pet Social Clubv 0.1.0 (React + TypeScript + Vite)
 
 <div align="center">
-
   <p><strong>Современная социальная сеть</strong></p>
   <p><strong>созданная с использованием передовых библиотек</strong></p>
   <p><strong>для удобного и молниеносного интерфейса.</strong></p>
   <p><strong>React</strong>, <strong>TypeScript</strong> и <strong>Vite</strong></p>
-  <img src="https://raw.githubusercontent.com/Truth2024/Pet-Social-Club/main/src/assets/page.png" alt="Скриншот Pet Social Club" width="600"/>
+  
+  <img src="https://raw.githubusercontent.com/Truth2024/Pet-Social-Club/main/src/assets/page.png" 
+       alt="Pet Social Club" 
+       style="width: 100%; max-width: 100%; height: auto"/>
 </div>
 
 ## 🚀 Возможности
