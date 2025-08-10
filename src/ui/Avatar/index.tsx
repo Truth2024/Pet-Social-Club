@@ -13,7 +13,7 @@ export const Avatar = ({ name, photoURL, size }: Avatar) => {
         <div
           className={`rounded-[20px] flex justify-center items-center bg-gray-400 ${size ? size : 'w-[40px] h-[40px]'}`}
         >
-          <span className="text-bold text-xl">{name?.charAt(0).toLocaleUpperCase()}</span>
+          <span className={`text-bold text-xl text-black`}>{name?.charAt(0).toLocaleUpperCase()}</span>
         </div>
       )}
     </>

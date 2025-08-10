@@ -25,14 +25,14 @@ export const Messages = ({ lastMessage, user }: ChatMessage) => {
         user == uidFromUrl ? 'bg-[#40C0E7] text-white' : 'hover'
       }`}
     >
-      <Avatar
-        name={userFromServer?.name}
-        photoURL={userFromServer?.photoURL}
-        size="w-[40px] h-[40px] bg-white text-white"
-      />
+      <Avatar name={userFromServer?.name} photoURL={userFromServer?.photoURL} size="w-[40px] h-[40px] bg-white" />
       <div className="flex flex-col">
         <span className="font-medium text-sm">{userFromServer?.name}</span>
-        <p className="text-sm font-normal text-gray-600 truncate max-w-[200px]">
+        <p
+          className={`text-sm font-normal text-gray-600 truncate max-w-[200px] ${
+            user == uidFromUrl ? ' text-white' : ''
+          }`}
+        >
           {lastMessage?.text || 'No messages yet'}
         </p>
       </div>
