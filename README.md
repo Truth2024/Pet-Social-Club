@@ -1,6 +1,6 @@
 # 👥 Pet Social Clubv 0.1.0 (React + TypeScript + Vite)
 
-<div style="display: flex; justify-content: center; flex-direction: column; align-items: center; text-align: center">
+<div style="display: flex; width:100%; justify-content: center; flex-direction: column; align-items: center; text-align: center">
   <div>
     Современная социальная сеть,<br>
     созданная с использованием передовых библиотек<br>
