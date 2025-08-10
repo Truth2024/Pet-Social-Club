@@ -2,7 +2,7 @@ import { Nav } from '../Nav';
 
 export const Header = () => {
   return (
-    <header className="header z-50 md:p-0 lg:p-2 2xl:p-4 flex flex-col-reverse md:flex-col items-center md:items-end border-none md:border-r border-gray-300">
+    <header className="header z-50 md:p-0 lg:p-2 2xl:p-4 flex flex-col-reverse md:flex-col items-center md:items-end md:border-r border-gray-300">
       <div className="h-full">
         <Nav />
       </div>

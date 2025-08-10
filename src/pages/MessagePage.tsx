@@ -35,8 +35,8 @@ const MessagePage = () => {
         <div className="h-2 w-2 rounded-full bg-gray-500 animate-bounce" style={{ animationDelay: '0.4s' }}></div>
       </div>
     );
-  if (error) return <p>Error: {error.message}</p>;
-  if (!snapshot || (snapshot.empty && !loading)) return <p>No chats yet</p>;
+  if (error) return <div className="text-center">Error: {error.message}</div>;
+  if (!snapshot || (snapshot.empty && !loading)) return <div className="text-center">No chats yet</div>;
 
   const chats: Chat[] = snapshot.docs.map((doc) => ({
     id: doc.id,
