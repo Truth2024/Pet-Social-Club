@@ -4,7 +4,7 @@ import { useEffect, useRef } from 'react';
 import type { DocumentData } from 'firebase/firestore';
 
 interface Props {
-  messages: DocumentData[]; // или твой тип с from/text/createdAt
+  messages: DocumentData[];
   currentUserId: string;
   chatId?: string | null;
 }

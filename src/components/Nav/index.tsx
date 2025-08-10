@@ -16,14 +16,11 @@ export const Nav = () => {
     <nav className="h-full flex flex-row md:flex-col">
       {navLinks
         .filter((link) => {
-          // Показываем все ссылки для авторизованных пользователей
           if (user) return true;
-          // Для неавторизованных скрываем Profile и Messages
           return link.label !== 'Profile' && link.label !== 'Messages';
         })
         .map((link) => {
           const isActive = link.href === '/' ? location.pathname === '/' : location.pathname.startsWith(link.href);
-
           return (
             <Link key={link.href} to={link.href} className="w-fit" aria-current={isActive ? 'page' : undefined}>
               <div
@@ -43,4 +40,3 @@ export const Nav = () => {
     </nav>
   );
 };
-// flex-direction: row;

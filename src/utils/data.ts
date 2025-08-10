@@ -10,9 +10,9 @@ export const formatDateWithoutSeconds = (dateInput: string | Date | Timestamp): 
   } else if (dateInput instanceof Date) {
     date = dateInput;
   } else if ('toDate' in dateInput && typeof dateInput.toDate === 'function') {
-    date = dateInput.toDate(); // Firestore Timestamp → Date
+    date = dateInput.toDate();
   } else {
-    return ''; // непонятный тип
+    return '';
   }
 
   const year = date.getFullYear();

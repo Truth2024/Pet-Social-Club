@@ -3,17 +3,9 @@ import { Avatar } from '../../ui/Avatar';
 
 import { useDocumentData } from 'react-firebase-hooks/firestore';
 import { db, doc } from '../../firebase/firebaseConfig';
+import type { ChatMessage } from '../../types/Chat';
 
-type Chat = {
-  lastMessage?: {
-    id: string;
-    text: string;
-    from: string;
-    createdAt: number;
-  };
-  user: string;
-};
-export const Messages = ({ lastMessage, user }: Chat) => {
+export const Messages = ({ lastMessage, user }: ChatMessage) => {
   const navigate = useNavigate();
 
   const [userFromServer] = useDocumentData(lastMessage?.from ? doc(db, 'users', user) : null);

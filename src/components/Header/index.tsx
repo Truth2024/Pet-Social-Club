@@ -12,6 +12,3 @@ export const Header = () => {
     </header>
   );
 };
-// flex-direction: row;
-// border: none;
-// width: 100%;

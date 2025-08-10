@@ -5,8 +5,6 @@ import { useLocation, useSearchParams } from 'react-router-dom';
 import { Spinner } from '../../ui/Spiner';
 import type { UserType } from '../../types/Auth/user';
 import { MessageList } from '../../ui/MessageList';
-
-// Импортируем кастомные хуки
 import { useChat } from '../../hooks/useChat';
 import { useSendMessage } from '../../firebase/firebaseChat';
 
@@ -16,7 +14,6 @@ export const Chat = () => {
   const location = useLocation();
   const userFromState = location.state as UserType | undefined;
 
-  // Используем кастомный хук для получения всех данных чата
   const { user, otherUser, loadingUser, chatId, messages, loadingMessages, setChatExists } = useChat(
     uid,
     userFromState,
@@ -32,7 +29,7 @@ export const Chat = () => {
     try {
       await sendMessage({ from: user.uid, text: message.trim() });
       setMessage('');
-      // Обновляем состояние, чтобы запустить подписку, если чат только что создан
+
       setChatExists(true);
     } catch (e) {
       console.error('Ошибка отправки сообщения:', e);

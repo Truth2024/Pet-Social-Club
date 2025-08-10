@@ -2,18 +2,8 @@ import { useCollection } from 'react-firebase-hooks/firestore';
 import { useAuth } from '../components/AuthContext';
 import { collection, db, orderBy, query, where } from '../firebase/firebaseConfig';
 import { Messages } from '../components/Messages';
+import type { Chat } from '../types/Chat';
 
-type Chat = {
-  id: string;
-  members: string[];
-  createdAt: number;
-  lastMessage?: {
-    id: string;
-    text: string;
-    from: string;
-    createdAt: number;
-  };
-};
 const MessagePage = () => {
   const { user } = useAuth();
 
@@ -47,7 +37,6 @@ const MessagePage = () => {
     <div className="w-full md:min-h-screen h-[200px]">
       <ul className="divide-y divide-gray-200">
         {chats.map((chat) => {
-          // Находим ID собеседника (исключаем текущего пользователя)
           const otherUserId = chat.members.find((memberId) => memberId !== user?.uid);
           const otherUser = otherUserId ? otherUserId : '';
           return <Messages key={chat.id} user={otherUser} lastMessage={chat.lastMessage} />;

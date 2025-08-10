@@ -28,7 +28,6 @@ export const PostList = ({ uid }: PostListProps) => {
   if (error) return <p className="text-red-500">Error: {error.message}</p>;
   if (!snapshot?.docs.length) return <p className="text-gray-500 mt-4 text-center">No posts yet</p>;
 
-  // Преобразуем snapshot.docs в массив Post с id
   const posts: Post[] = snapshot.docs.map((doc) => ({
     id: doc.id,
     ...(doc.data() as Omit<Post, 'id'>),

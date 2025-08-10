@@ -11,7 +11,6 @@ const UserPage = () => {
   const location = useLocation();
   const userFromState = location.state as UserType | undefined;
 
-  // Загружаем только если нет userFromState
   const [userFromServer, loading] = useDocumentData(!userFromState && uid ? doc(db, 'users', uid) : null);
 
   const user = userFromState || userFromServer;

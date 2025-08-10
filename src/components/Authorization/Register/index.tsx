@@ -25,30 +25,26 @@ export const Register = () => {
   const [serverError, setServerError] = React.useState<string | null>(null);
   const onSubmit = async (data: RegisterSchemaType) => {
     try {
-      setServerError(null); // Сбрасываем ошибку перед отправкой
+      setServerError(null);
       const { email, password, name } = data;
 
-      // 1. Создаём пользователя в Firebase Auth
       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
       const user = userCredential?.user;
 
       if (user) {
-        // 2. Сохраняем доп. данные в Firestore (коллекция users)
         await setDoc(doc(db, 'users', user.uid), {
           name,
           uid: user.uid,
           email: user.email,
-          photoURL: '', // Пока пусто, потом можно загрузить аватар
-          createdAt: serverTimestamp(), // Дата в формате Firestore
+          photoURL: '',
+          createdAt: serverTimestamp(),
         });
 
-        // Сбрасываем форму после успешной регистрации
         reset();
         dispatch(setOpen(false));
       }
     } catch (error) {
       if (error instanceof FirebaseError) {
-        // Обрабатываем Firebase ошибки
         switch (error.code) {
           case 'auth/email-already-in-use':
             setServerError('Этот email уже используется');
