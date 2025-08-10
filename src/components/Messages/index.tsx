@@ -21,8 +21,8 @@ export const Messages = ({ lastMessage, user }: ChatMessage) => {
   return (
     <div
       onClick={handleChatClick}
-      className={`p-[12px] w-full h-[73px] border-b border-b-gray-200 hover flex items-center cursor-pointer gap-2 ${
-        user == uidFromUrl ? 'bg-[#40C0E7]' : ''
+      className={`p-[12px] w-full h-[73px] border-b border-b-gray-200 flex items-center cursor-pointer gap-2 ${
+        user == uidFromUrl ? 'bg-[#40C0E7]' : 'hover'
       }`}
     >
       <Avatar name={userFromServer?.name} photoURL={userFromServer?.photoURL} />
