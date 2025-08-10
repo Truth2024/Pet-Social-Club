@@ -1,69 +1,47 @@
-# React + TypeScript + Vite
+🎬 Pet Social Clubv 0.1.0 (React + TypeScript + Vite)
+Социальная сеть, созданная с использованием современных библиотек для удобного и быстрого интерфейса. React, TypeScript и Vite.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🚀 Возможности
+🔐 Система авторизации/регистрации пользователя
+👤 Профиль пользователя
+💬 Система чатинга
+✅ Добавление постов
+❌ Удаление постов
+💾 Получение данных с сервера
+⚛️ Управление состоянием через Redux Toolkit
+🌐 Получение данных через Firebase
+📲🖥️ Адаптивный дизайн (для мобильных и десктопов)
+🎨 Tailwind стили
+⚡ Быстрая сборка и разработка с Vite
 
-Currently, two official plugins are available:
+🛠️ Стек технологий
+React
+TypeScript
+Vite
+Zod
+React-hook-form
+Redux Toolkit
+Fairbase
+ESLint + Prettier для качества кода
+Tailwind
+📦 Установка и запуск
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Клонировать репозиторий
 
-## Expanding the ESLint configuration
+git clone https://github.com/Truth2024/Pet-Social-Club.git
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+# Перейти в директорию проекта
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+cd your-repo
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+# Установить зависимости
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+npm install
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+# Запустить проект в режиме разработки
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+npm run dev
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+🧑‍💻 Автор
+github.com/Truth2024
+Создано с 💙 и React
