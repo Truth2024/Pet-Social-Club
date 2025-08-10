@@ -17,7 +17,7 @@ export const Messages = ({ lastMessage, user }: ChatMessage) => {
     navigate(`/messages?uid=${user}`);
     console.log(user);
   };
-  const avatarSize = user == uidFromUrl ? 'w-[40px] h-[40px] gb-white' : 'w-[40px] h-[40px]';
+  const avatarSize = user == uidFromUrl ? 'w-[40px] h-[40px] bg-white' : 'w-[40px] h-[40px]';
 
   return (
     <div
