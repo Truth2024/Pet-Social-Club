@@ -22,10 +22,14 @@ export const Messages = ({ lastMessage, user }: ChatMessage) => {
     <div
       onClick={handleChatClick}
       className={`p-[12px] w-full h-[73px] border-b border-b-gray-200 flex items-center cursor-pointer gap-2 ${
-        user == uidFromUrl ? 'bg-[#40C0E7]' : 'hover'
+        user == uidFromUrl ? 'bg-[#40C0E7] text-white' : 'hover'
       }`}
     >
-      <Avatar name={userFromServer?.name} photoURL={userFromServer?.photoURL} />
+      <Avatar
+        name={userFromServer?.name}
+        photoURL={userFromServer?.photoURL}
+        size="w-[40px] h-[40px] bg-white text-white"
+      />
       <div className="flex flex-col">
         <span className="font-medium text-sm">{userFromServer?.name}</span>
         <p className="text-sm font-normal text-gray-600 truncate max-w-[200px]">
