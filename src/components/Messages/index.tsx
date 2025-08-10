@@ -22,7 +22,7 @@ export const Messages = ({ lastMessage, user }: ChatMessage) => {
     <div
       onClick={handleChatClick}
       className={`p-[12px] w-full h-[73px] border-b border-b-gray-200 hover flex items-center cursor-pointer gap-2 ${
-        user == uidFromUrl ? 'border-r-4 border-[#40C0E7]' : ''
+        user == uidFromUrl ? 'bg-[#40C0E7]' : ''
       }`}
     >
       <Avatar name={userFromServer?.name} photoURL={userFromServer?.photoURL} />
