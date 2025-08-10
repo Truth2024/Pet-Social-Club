@@ -17,6 +17,7 @@ export const Messages = ({ lastMessage, user }: ChatMessage) => {
     navigate(`/messages?uid=${user}`);
     console.log(user);
   };
+  const avatarSize = user == uidFromUrl ? 'w-[40px] h-[40px] gb-white' : 'w-[40px] h-[40px]';
 
   return (
     <div
@@ -25,9 +26,9 @@ export const Messages = ({ lastMessage, user }: ChatMessage) => {
         user == uidFromUrl ? 'bg-[#40C0E7] text-white' : 'hover'
       }`}
     >
-      <Avatar name={userFromServer?.name} photoURL={userFromServer?.photoURL} size="w-[40px] h-[40px] bg-white" />
+      <Avatar name={userFromServer?.name} photoURL={userFromServer?.photoURL} size={avatarSize} />
       <div className="flex flex-col">
-        <span className="font-medium text-sm">{userFromServer?.name}</span>
+        <span className="font-medium text-sm text-black">{userFromServer?.name}</span>
         <p
           className={`text-sm md:text-base font-normal text-gray-600 truncate max-w-[200px] ${
             user == uidFromUrl ? ' text-white' : ''
